@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: snakegame
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: snakegame
+  template:
+    metadata:
+      labels:
+        app: snakegame
+    spec:
+      containers:
+      - name: snakegame
+        image: coloryeon/snakegame:latest
+        ports:
+        - containerPort: 5000
