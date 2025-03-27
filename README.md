@@ -34,8 +34,7 @@ Use Terraform to create an EC2 instance and install Jenkins:
 terraform init
 terraform apply
 ```
-Access Jenkins via `http://<EC2-IP>:8080`.
-s
+Access Jenkins via `http://<EC2-IP>:8080`
 ### 2. Configure Jenkins Pipeline
 - Install required plugins: Docker, Kubernetes, Terraform, AWS CLI
 - Create a pipeline with the following steps:
