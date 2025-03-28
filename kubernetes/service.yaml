@@ -1,14 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: python-microservice
-  annotations:
-    service.beta.kubernetes.io/aws-load-balancer-type: "nlb"  # Network Load Balancer (opcional)
+  name: snakegame
 spec:
   selector:
-    app: python-microservice
+    app: snakegame
   ports:
     - protocol: TCP
       port: 80
       targetPort: 5000
-  type: LoadBalancer
+  type: NodePort
